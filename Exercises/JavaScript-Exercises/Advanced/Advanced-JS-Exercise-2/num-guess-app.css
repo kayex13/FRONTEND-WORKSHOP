@@ -74,15 +74,25 @@ h2 {
 }
 
 #guess-container {
+    display: flex;
     padding: 0 40px;
-    gap: 80px;
+    gap: 15px;
+    flex-wrap: wrap;
     justify-content: left;
+    background-color: blue;;
 }
 
 .previous-guess {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 30px;
     font-size: 120px;
-    border-radius: 10px;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 #new-game-div {

@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 style="text-align: left;">Survey Form</h1>
+    <form id="surveyForm" onsubmit="thankYouMessage(event)">
 
+<form style="text-align: left;"> 
+    <label>Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <label>How satisfied are you with our service?</label><br>
+    <input type="radio" id="satisfaction1" name="satisfaction" value="Excellent">Excellent<br>
+    <input type="radio" id="satisfaction2" name="satisfaction" value="Good">Good<br>
+    <input type="radio" id="satisfaction3" name="satisfaction" value="Excellent">Average<br>
+    <br>
+
+    <label>What features did you like? (Select all that apply):</label><br>
+    <input type="checkbox" id="feature1" name="features[]" value="Speed">Speed<br>
+    <input type="checkbox" id="feature2" name="features[]" value="Design">Design<br>
+    <input type="checkbox" id="feature3" name="features[]" value="User Interface">User Interface<br>
+    <br>
+
+    <button type="submit">Submit</button>
+    </form>
+</form>
+
+<div id="thankYouMessage" style="display: none;">
+    <h3>Thank you for answering the survey!</h3>
+</div>
+
+<script>
+    function thankYouMessage(event) {
+        event.preventDefault();
+        document.getElementById("surveyForm").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+    }
+</script>
+</body>
+</html>
